@@ -1,8 +1,20 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from routers.models import router as models_router
+from routers.attacks import router as attacks_router
 
 app = FastAPI(
-    title="Crescendo"
+    title="Crescendo", version="1.0"
 )
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+app.include_router(models_router)
+app.include_router(attacks_router)
 
 @app.get("/") # Endpoint to check if the API is running
 def read_root():
