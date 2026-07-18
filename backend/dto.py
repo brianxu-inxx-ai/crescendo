@@ -7,7 +7,7 @@ class ModelInfo(BaseModel):
     id: str
     huggingface_id: str
 
-class ModelResponse(BaseModel):
+class ModelsResponse(BaseModel):
     models: List[ModelInfo]
 
 class SubmitAttackRequest(BaseModel):
