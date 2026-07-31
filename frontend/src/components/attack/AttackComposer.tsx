@@ -7,7 +7,7 @@ import type {
 	SubmitAttackRequest,
 	SubmitAttackResponse,
 } from '../../api/types'
-import { validateAttackRequest } from '../../features/attack/validation'
+import { validateAttackRequestWithZod } from '../../features/attack/validation'
 
 interface AttackComposerProps {
 	models: ModelInfo[]
@@ -46,7 +46,7 @@ export function AttackComposer({ models }: AttackComposerProps) {
 			seed: seed.trim() === '' ? null : Number(seed),
 		}
 
-		const nextErrors = validateAttackRequest(payload, authorizedUse)
+		const nextErrors = validateAttackRequestWithZod(payload, authorizedUse)
 		setErrors(nextErrors)
 		setResult(null)
 
