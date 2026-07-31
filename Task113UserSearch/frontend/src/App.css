@@ -1,0 +1,16 @@
+.caption {
+  margin: 8px 0 24px;
+  font-size: 0.95rem;
+  color: #555;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  box-sizing: border-box;
+}
