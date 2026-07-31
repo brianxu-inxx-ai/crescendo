@@ -104,3 +104,148 @@ h1 {
   font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
   font-size: 13px;
 }
+
+.attack-composer {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #303642;
+}
+
+.attack-composer h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.form-intro {
+  margin: 0 0 20px;
+  color: #aeb7c6;
+  line-height: 1.6;
+}
+
+.attack-composer form,
+.form-field {
+  display: grid;
+  gap: 8px;
+}
+
+.attack-composer form {
+  gap: 18px;
+}
+
+.form-field span,
+.form-field legend {
+  color: #dce2ec;
+  font-weight: 600;
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+  width: 100%;
+  border: 1px solid #303642;
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: #f6f7fb;
+  background: #111318;
+  font: inherit;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field small,
+.model-option small {
+  color: #8993a3;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.model-options {
+  display: grid;
+  gap: 8px;
+}
+
+.model-option,
+.authorization-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.model-option input,
+.authorization-check input {
+  width: auto;
+  margin-top: 3px;
+}
+
+.model-option span {
+  display: grid;
+  gap: 2px;
+}
+
+.authorization-check {
+  color: #c8ced9;
+  line-height: 1.5;
+}
+
+.submit-button {
+  min-height: 42px;
+  border: 1px solid #38bdf8;
+  border-radius: 6px;
+  color: #071017;
+  background: #7dd3fc;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.submit-button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.form-message {
+  margin-top: 18px;
+  border: 1px solid;
+  border-radius: 6px;
+  padding: 14px 16px;
+}
+
+.form-message ul {
+  margin-bottom: 0;
+}
+
+.success-message {
+  border-color: #34d399;
+  background: #0d2a22;
+}
+
+.success-message dl,
+.success-message dl div {
+  display: grid;
+  gap: 6px;
+}
+
+.success-message dl div {
+  grid-template-columns: 100px 1fr;
+}
+
+.success-message dt {
+  color: #9ca6b5;
+}
+
+.success-message dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { getModels } from '../api/models'
 import type { ModelInfo } from '../api/types'
 import { ModelList } from '../components/ModelList'
+import { AttackComposer } from '../components/attack/AttackComposer'
 
 export function HomePage() {
   const [models, setModels] = useState<ModelInfo[]>([])
@@ -44,6 +45,9 @@ export function HomePage() {
           {isLoading && <p className="status-message">Loading models...</p>}
           {error && <p className="error-message">Failed to load models: {error}</p>}
           {!isLoading && !error && <ModelList models={models} />}
+          {!isLoading && !error && models.length > 0 && (
+            <AttackComposer models={models} />
+          )}
         </div>
       </section>
     </main>

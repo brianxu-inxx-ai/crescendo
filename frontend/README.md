@@ -30,3 +30,13 @@ If you are developing a production application, we recommend enabling type-aware
 ```
 
 See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+
+## Attack Submit API
+
+Current `submitAttack()` calls `POST /api/v1/attacks`.
+
+- Location: `src/api/attacks.ts`
+- Helper: `postJson` in `src/api/http.ts`
+- Backend behavior now: contract stub placeholder job (for example `demo-job-001`)
+- Evolves when: later backend manuals replace the stub with real job creation, queue, and engine
+- Frontend change then: keep `submitAttack()` signature; no form rewrite required
