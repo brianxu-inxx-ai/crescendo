@@ -6,9 +6,8 @@ from dto import ModelInfo, ModelsResponse
 router = APIRouter(prefix="/api/v1/models", tags=["models"])
 
 
-# GET /api/v1/models — response_model tells FastAPI/OpenAPI what JSON shape to document.
 @router.get("", response_model=ModelsResponse)
-def list_models():
+async def get_models():
     return ModelsResponse(
         models=[
             ModelInfo(id="demo-model", huggingface_id="demo/model"),
